@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LembretesApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b4bebe62814fb8c4b08253437bea03a058ed383")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+971281bd0504e6530abab8fe0b73099f9c9fe9a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("LembretesApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LembretesApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
