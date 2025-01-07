@@ -1,0 +1,167 @@
+$primary-color: #1E3A8A;
+$secondary-color: #f5f5f5;
+$text-color: #000000;
+$border-radius: 8px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #1E3A8A, #0F1E4D);
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 2rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-size: 2rem;
+        color: $primary-color;
+    }
+}
+
+main {
+    .add-lembrete {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid $primary-color;
+        border-radius: $border-radius;
+        background: $primary-color;
+        color: white;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            label {
+                font-weight: bold;
+            }
+
+            input,
+            button {
+                padding: 0.5rem;
+                border-radius: $border-radius;
+                border: 1px solid $primary-color;
+            }
+
+            input {
+                background-color: white;
+            }
+
+            button {
+                background-color: darken($primary-color, 10%);
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken($primary-color, 20%);
+                }
+            }
+        }
+    }
+
+    .lembrete-group {
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: darken($primary-color, 10%);
+        }
+
+        .lembrete-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $secondary-color;
+            border: 1px solid #ddd;
+            border-radius: $border-radius;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            button {
+                background-color: #e53935;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: $border-radius;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken(#e53935, 10%);
+                }
+            }
+        }
+    }
+}
+
+.add-lembrete {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid $primary-color;
+    border-radius: $border-radius;
+    background: $primary-color;
+    color: white;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        label {
+            font-weight: bold;
+            color: white; // Texto branco no fundo verde
+        }
+
+        input,
+        button {
+            padding: 0.5rem;
+            border-radius: $border-radius;
+            border: 1px solid $primary-color;
+        }
+
+        input {
+            background-color: white;
+            color: $text-color; // Garante contraste no input
+        }
+
+        button {
+            background-color: darken($primary-color, 10%);
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($primary-color, 20%);
+            }
+        }
+    }
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
