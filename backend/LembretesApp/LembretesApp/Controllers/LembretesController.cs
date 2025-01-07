@@ -22,6 +22,13 @@ namespace LembretesApp.Controllers
             return Ok(lembretes);
         }
 
+        [HttpGet("grouped")]
+        public async Task<IActionResult> GetGrouped()
+        {
+            var groupedLembretes = await _service.GetGroupedByDateAsync();
+            return Ok(groupedLembretes);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Lembrete lembrete)
         {

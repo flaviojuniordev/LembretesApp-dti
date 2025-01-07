@@ -9,6 +9,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<LembreteService>();
 
+// Configurar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+});
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -16,6 +25,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseRouting();
+app.UseCors("AllowAll");
 app.UseAuthorization();
 
 app.MapControllers();

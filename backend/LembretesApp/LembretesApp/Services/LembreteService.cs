@@ -36,6 +36,14 @@ namespace LembretesApp.Services
             return true;
         }
 
+        public async Task<Dictionary<DateTime, List<Lembrete>>> GetGroupedByDateAsync()
+        {         
+            return await _context.Lembretes
+                .OrderBy(l => l.Data)
+                .GroupBy(l => l.Data.Date) 
+                .ToDictionaryAsync(g => g.Key, g => g.ToList());
+        }
+
 
         public async Task<bool> DeleteAsync(int id)
         {
